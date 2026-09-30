@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bm6pyqa66bsq7"]
+
+[ext_resource type="Script" uid="uid://tpmffoxuhf82" path="res://main.gd" id="1_p0ybc"]
+
+[node name="odin" type="Node2D" unique_id=450430074]
+script = ExtResource("1_p0ybc")
+
+[node name="board" type="Label" parent="." unique_id=1088296141]
+offset_left = 27.0
+offset_top = 15.0
+offset_right = 1125.0
+offset_bottom = 325.0
+theme_override_font_sizes/font_size = 26
+text = "Vez do Jogador 1"
+autowrap_mode = 3
+
+[node name="btnPull" type="Button" parent="." unique_id=1527497301]
+offset_left = 127.0
+offset_top = 441.0
+offset_right = 360.0
+offset_bottom = 568.0
+theme_override_font_sizes/font_size = 32
+text = "Puxar"
+
+[node name="btnKeep" type="Button" parent="." unique_id=1571800345]
+offset_left = 453.0
+offset_top = 434.0
+offset_right = 715.0
+offset_bottom = 562.0
+theme_override_font_sizes/font_size = 32
+text = "Manter"
+
+[node name="btnReset" type="Button" parent="." unique_id=1175693647]
+offset_left = 793.0
+offset_top = 439.0
+offset_right = 1074.0
+offset_bottom = 562.0
+theme_override_font_sizes/font_size = 32
+text = "Reiniciar"
+
+[node name="labelResult" type="Label" parent="." unique_id=526451675]
+offset_left = 313.0
+offset_top = 330.0
+offset_right = 831.0
+offset_bottom = 425.0
+theme_override_colors/font_color = Color(0.7036819, 0, 0.3641088, 1)
+theme_override_font_sizes/font_size = 54
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btnPeek" type="Button" parent="." unique_id=1174447991]
+offset_left = 127.0
+offset_top = 580.0
+offset_right = 360.0
+offset_bottom = 636.0
+theme_override_font_sizes/font_size = 28
+text = "Espiar"
+
+[node name="btnDiscard" type="Button" parent="." unique_id=274347803]
+offset_left = 453.0
+offset_top = 580.0
+offset_right = 715.0
+offset_bottom = 636.0
+theme_override_font_sizes/font_size = 28
+text = "Descartar"
+
+[connection signal="button_up" from="btnPull" to="." method="_on_btn_pull_button_up"]
+[connection signal="button_up" from="btnKeep" to="." method="_on_btn_keep_button_up"]
+[connection signal="button_up" from="btnReset" to="." method="_on_btn_reset_button_up"]
+[connection signal="button_up" from="btnPeek" to="." method="_on_btn_peek_button_up"]
+[connection signal="button_up" from="btnDiscard" to="." method="_on_btn_discard_button_up"]
